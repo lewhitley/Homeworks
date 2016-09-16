@@ -119,12 +119,12 @@ class MyMap
   end
 end
 
-map = MyMap.new
-map.assign(2,true)
-map.show
-map.assign(2,false)
-map.assign(3,true)
-map.show
-map.remove(2)
-map.lookup(2)
-map.lookup(3)
+# map = MyMap.new
+# map.assign(2,true)
+# map.show
+# map.assign(2,false)
+# map.assign(3,true)
+# map.show
+# map.remove(2)
+# map.lookup(2)
+# map.lookup(3)
