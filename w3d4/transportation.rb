@@ -36,6 +36,10 @@ class Route
     primary_key: :id
   )
 
+  has_many :drivers,
+    through: :buses,
+    source: :drivers
+
   def n_plus_one_drivers
     buses = self.buses
 
@@ -50,8 +54,18 @@ class Route
 
     all_drivers
   end
+  # Create a hash with bus id's as keys and an array of bus drivers
+  # as the corresponding value => {'1' => ['Joan Lee', 'Charlie McDonald',
+  # 'Kevin Quashie'], '2' => ['Ed Michaels', 'Lisa Frank', 'Sharla Alegria']}
 
   def better_drivers_query
-    # TODO: your code here
+    all_drivers = {}
+    buses = self.buses.includes(:drivers => :name)
+    buses.each do |bus|
+      bus.drivers.each do |driver|
+        all_drivers[bus] = driver.name
+      end
+    end
+    all_drivers
   end
 end

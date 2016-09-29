@@ -70,8 +70,10 @@ class House
 
     seeds
   end
+  #creates an array of all the seeds within a given house
 
   def better_seeds_query
-    # TODO: your code here
+    plants = self.plants.includes(:seeds)
+    plants.map { |plant| plant.seeds }
   end
 end
