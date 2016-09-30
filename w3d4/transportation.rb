@@ -60,11 +60,13 @@ class Route
 
   def better_drivers_query
     all_drivers = {}
-    buses = self.buses.includes(:drivers => :name)
+    buses = self.buses.includes(:drivers)
     buses.each do |bus|
+      drivers = []
       bus.drivers.each do |driver|
-        all_drivers[bus] = driver.name
+        drivers << driver.name
       end
+      all_drivers[bus] = drivers
     end
     all_drivers
   end
