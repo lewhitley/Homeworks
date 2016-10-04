@@ -54,6 +54,53 @@
         <li>Bake 35 to 40 minutes. Allow to cool completely before removing from pan.</li>
       </ol>
     </section>
+    <section>
+      <h3>Submit a Review</h3>
+      <form action = "/reviews" method = "post">
+        <label for = "reviewer_name">Reviewer Name</label>
+        <input type = "text" name = "reviewer[name]" id = "reviewer_name">
+        <br>
+
+        <label for = "reviewer_rating">Rating</label>
+        <br>
+        <input type = "radio" name = "reviewer[rating]"
+          id = "reviewer_rating" value = 5>
+        <label for = "reviewer_rating">Five Stars</label>
+        <br>
+        <input type = "radio" name = "reviewer[rating]"
+          id = "reviewer_rating" value = 4>
+        <label for = "reviewer_rating">Four Stars</label>
+        <br>
+        <input type = "radio" name = "reviewer[rating]"
+          id = "reviewer_rating" value = 3>
+        <label for = "reviewer_rating">Three Stars</label>
+        <br>
+        <input type = "radio" name = "reviewer[rating]"
+          id = "reviewer_rating" value = 2>
+        <label for = "reviewer_rating">Two Stars</label>
+        <br>
+        <input type = "radio" name = "reviewer[rating]"
+          id = "reviewer_rating" value = 1 checked = "checked">
+        <label for = "reviewer_rating">One Star</label>
+        <br>
+
+        <label for = "reviewer_rating">Cooking Expertise</label>
+        <select name = "reviewer[expertise]" id = "reviewer_expertise">
+          <option value = "Select Cooking Expertise" disabled selected="selected">Select Cooking Expertise</option>
+          <option value = "Sometimes cook">Sometimes cook</option>
+          <option value = "Cook every day">Cook every day</option>
+          <option value = "Cooking is a hobby">Cooking is a hobby</option>
+          <option value = "Professional Chef">Professional Chef</option>
+        </select>
+        <br>
+
+        <label for = "reviewer_review">Review</label>
+        <textarea name = "reviewer[review]" id = "reviewer_review"></textarea>
+        <br>
+
+        <input type = "submit" value = "Submit Review">
+      </form>
+    </section>
     <footer>
       <p>
         Original recipe from the Country Women's Association cookbook
