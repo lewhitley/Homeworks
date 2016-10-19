@@ -15,22 +15,8 @@ input, select {
   outline:none;
 }
 
-.submit {
-  background-color: gold;
-}
-
-.submit:hover{
-  background-color: #a17f1a;
-}
-
-input[type='radio']{
-  -webkit-appearance: none;
-  width: 27px;
-  height: 27px;
-  background-image: url(./stars.png);
-  vertical-align: bottom;
-}
-
-ul li:nth-child(2n) {
-  background-color: lightgray;
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
 }

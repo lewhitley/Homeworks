@@ -20,7 +20,7 @@
 
 </script>
 
-  <header>
+  <header class="clearfix">
     <img src="https://tf-assets-prod.s3.amazonaws.com/splash/courses/acad/icon.png"/>
     <nav>
       <ul>
@@ -32,7 +32,6 @@
   </header>
 
   <body>
-    <h1>Date and Ginger Cake</h1>
     <aside>
       <h2>Ingredients</h2>
       <a name="Ingredients"></a>
@@ -48,18 +47,19 @@
         <li>4 tablespoons chopped crystallized ginger</li>
       </ul>
     </aside>
+    <h1>Date and Ginger Cake</h1>
     <section id="recipe">
       <figure>
         <img src="https://cauldronsandcupcakes.files.wordpress.com/2013/07/2013-07-06-14-42-33.jpg" alt="date-and-ginger-cake"/>
+        <figcaption>
+          <a href="https://en.wikipedia.org/wiki/Gingerbread">Wikipedia: Gingerbread</a>
+        </figcaption>
       </figure>
       <h2>Description</h2>
       <a name="Description"></a>
       <p>
         Date and Ginger Cake is a delicious and dense Australian cake. This recipe makes 2 loaves.
       </p>
-      <figcaption>
-        <a href="https://en.wikipedia.org/wiki/Gingerbread">Wikipedia: Gingerbread</a>
-      </figcaption>
       <h2>Directions</h2>
       <a name="Directions"></a>
       <ol>
@@ -72,53 +72,59 @@
         <li>Pour into two standard size loaf pans that have been sprayed with Pam.</li>
         <li>Bake 35 to 40 minutes. Allow to cool completely before removing from pan.</li>
       </ol>
-    </section>
-    <section id="reviews">
-      <h3>Submit a Review</h3>
-      <form action = "/reviews" method = "post">
-        <label for = "reviewer_name">Reviewer Name</label>
-        <input type = "text" name = "reviewer[name]" id = "reviewer_name">
-        <br>
+      <section id="reviews">
+        <h2>Reviews</h2>
+        <form action = "/reviews" method = "post">
+          <div>
+            <label>
+              Name <input type = "text" name = "reviewer[name]">
+            </label>
+          </div>
 
-        <label for = "reviewer_rating">Rating</label>
-        <br>
-        <input type = "radio" name = "reviewer[rating]"
-          id = "reviewer_rating" value = 5>
-        <label for = "reviewer_rating">Five Stars</label>
-        <br>
-        <input type = "radio" name = "reviewer[rating]"
-          id = "reviewer_rating" value = 4>
-        <label for = "reviewer_rating">Four Stars</label>
-        <br>
-        <input type = "radio" name = "reviewer[rating]"
-          id = "reviewer_rating" value = 3>
-        <label for = "reviewer_rating">Three Stars</label>
-        <br>
-        <input type = "radio" name = "reviewer[rating]"
-          id = "reviewer_rating" value = 2>
-        <label for = "reviewer_rating">Two Stars</label>
-        <br>
-        <input type = "radio" name = "reviewer[rating]"
-          id = "reviewer_rating" value = 1 checked = "checked">
-        <label for = "reviewer_rating">One Star</label>
-        <br>
+          <div class="radio">
+            <label>
+              <input type = "radio" name = "reviewer[rating]" value = 5>
+              5
+            </label>
+            <br>
+            <label>
+              <input type = "radio" name = "reviewer[rating]" value = 4>
+              4
+            </label>
+            <br>
+            <label>
+              <input type = "radio" name = "reviewer[rating]" value = 3>
+              3
+            </label>
+            <br>
+            <label>
+              <input type = "radio" name = "reviewer[rating]" value = 2>
+              2
+            </label>
+            <br>
+            <label>
+              <input type = "radio" name = "reviewer[rating]" value = 1 checked = "checked">
+              1
+            </label>
+          </div>
 
-        <label for = "reviewer_rating">Cooking Expertise</label>
-        <select name = "reviewer[expertise]" id = "reviewer_expertise">
-          <option value = "Select Cooking Expertise" disabled selected="selected">Select Cooking Expertise</option>
-          <option value = "Sometimes cook">Sometimes cook</option>
-          <option value = "Cook every day">Cook every day</option>
-          <option value = "Cooking is a hobby">Cooking is a hobby</option>
-          <option value = "Professional Chef">Professional Chef</option>
-        </select>
-        <br>
+          <div>
+            <select name = "reviewer[expertise]" id = "reviewer_expertise">
+              <option value = "Select Cooking Expertise" disabled selected="selected">Select Cooking Expertise</option>
+              <option value = "Sometimes cook">Sometimes cook</option>
+              <option value = "Cook every day">Cook every day</option>
+              <option value = "Cooking is a hobby">Cooking is a hobby</option>
+              <option value = "Professional Chef">Professional Chef</option>
+            </select>
+          </div>
 
-        <label for = "reviewer_review">Review</label>
-        <textarea name = "reviewer[review]" id = "reviewer_review"></textarea>
-        <br>
+          <div>
+            <textarea name = "reviewer[review]" class="review-text"></textarea>
+          </div>
 
-        <input type = "submit" value = "Submit Review" class="submit">
-      </form>
+          <input type = "submit" value = "Submit Review" class="submit">
+        </form>
+      </section>
     </section>
     <footer>
       <p>

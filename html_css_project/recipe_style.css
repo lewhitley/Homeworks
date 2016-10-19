@@ -1,14 +1,19 @@
 body{
   font-family: Arial, sans-serif;
-  background-color: pink;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 h1{
-  font-size: 38pt;
+  font-size: 38px;
 }
 
 h2{
-  font-size: 32pt;
+  font-size: 32px;
+  margin: 15px 0px;
 }
 
 .ingredients-list {
@@ -16,14 +21,93 @@ h2{
 }
 
 ol li {
-  list-style: georgian;
+  list-style:lower-latin;
 }
 
 header > img {
   width: 100px;
+  height: 100px;
+  float: left;
+  display: inline;
 }
 
-ul > li > a{
+ul > li{
   text-decoration: none;
   color: inherit;
+}
+
+ol li:nth-child(2n) {
+  background-color: lightgray;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav li{
+  list-style: none;
+  padding: 20px;
+}
+
+aside li {
+  padding-bottom: 20px;
+}
+
+.submit {
+  background-color: gold;
+}
+
+.submit:hover{
+  background-color: #a17f1a;
+}
+
+input[type='radio']{
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
+  background-image: url(./stars.png);
+  vertical-align: bottom;
+}
+
+body section{
+  width: 700px;
+  float: left;
+}
+
+body section img {
+  width: 700px;
+}
+
+section figcaption {
+  margin: 5px;
+}
+
+body aside{
+  width: 180px;
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+}
+
+body, footer, header {
+  width: 900px;
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+.radio {
+  display: flex;
+}
+
+.review-text {
+  width: 300px;
+  height: 100px;
+}
+
+footer {
+  float: left;
+  margin-top: 10px;
 }
