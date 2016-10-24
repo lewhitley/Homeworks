@@ -2,11 +2,6 @@ body{
   font-family: Arial, sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 h1{
   font-size: 38px;
 }
@@ -29,6 +24,10 @@ header > img {
   height: 100px;
   float: left;
   display: inline;
+}
+
+nav {
+  float: right;
 }
 
 ul > li{
@@ -69,29 +68,16 @@ input[type='radio']{
   vertical-align: bottom;
 }
 
-body section{
-  width: 700px;
-  float: left;
+input[type="radio"]:checked {
+  background-position: 30px 30px;
 }
 
 body section img {
-  width: 700px;
+  width: 100%;
 }
 
 section figcaption {
   margin: 5px;
-}
-
-body aside{
-  width: 180px;
-  display: inline-block;
-  float: left;
-  margin-right: 15px;
-}
-
-body, footer, header {
-  width: 900px;
-  margin: 0 auto;
 }
 
 form div {
@@ -105,9 +91,4 @@ form div {
 .review-text {
   width: 300px;
   height: 100px;
-}
-
-footer {
-  float: left;
-  margin-top: 10px;
 }

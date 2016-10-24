@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="The best dense cake for a cold winter night."
+    <meta name="description" content="The best dense cake for a cold winter night.">
     <title>Lindsey Whitley Recipe</title>
     <link rel="stylesheet" href="custom_reset_style.css" media="screen" title="no title">
     <link rel="stylesheet" href="recipe_style.css" media="screen" title="no title">
@@ -19,20 +19,19 @@
   ga('send', 'pageview');
 
 </script>
-
-  <header class="clearfix">
-    <img src="https://tf-assets-prod.s3.amazonaws.com/splash/courses/acad/icon.png"/>
-    <nav>
-      <ul>
-        <li><a href = "#Description">Description</a></li>
-        <li><a href = "#Ingredients">Ingredients</a></li>
-        <li><a href = "#Directions">Directions</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <body>
-    <aside>
+    <header class="clearfix">
+      <img src="https://tf-assets-prod.s3.amazonaws.com/splash/courses/acad/icon.png"/>
+      <nav>
+        <ul>
+          <li><a href = "#Description">Description</a></li>
+          <li><a href = "#Ingredients">Ingredients</a></li>
+          <li><a href = "#Directions">Directions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="col">
       <h2>Ingredients</h2>
       <a name="Ingredients"></a>
       <ul class="ingredients-list">
@@ -47,8 +46,9 @@
         <li>4 tablespoons chopped crystallized ginger</li>
       </ul>
     </aside>
-    <h1>Date and Ginger Cake</h1>
-    <section id="recipe">
+
+    <section class="col" id="recipe">
+      <h1>Date and Ginger Cake</h1>
       <figure>
         <img src="https://cauldronsandcupcakes.files.wordpress.com/2013/07/2013-07-06-14-42-33.jpg" alt="date-and-ginger-cake"/>
         <figcaption>
@@ -72,6 +72,7 @@
         <li>Pour into two standard size loaf pans that have been sprayed with Pam.</li>
         <li>Bake 35 to 40 minutes. Allow to cool completely before removing from pan.</li>
       </ol>
+
       <section id="reviews">
         <h2>Reviews</h2>
         <form action = "/reviews" method = "post">
@@ -125,13 +126,14 @@
           <input type = "submit" value = "Submit Review" class="submit">
         </form>
       </section>
+
+      <footer>
+        <p>
+          Original recipe from the Country Women's Association cookbook
+          with conversion to Imperial measurements by Laureen Whitley.
+          <a href="http://www.food.com/recipe/country-womens-association-delicious-date-and-ginger-cake-463590">CWA Recipe</a>
+        </p>
+      </footer>
     </section>
-    <footer>
-      <p>
-        Original recipe from the Country Women's Association cookbook
-        with conversion to Imperial measurements by Laureen Whitley.
-        <a href="http://www.food.com/recipe/country-womens-association-delicious-date-and-ginger-cake-463590">CWA Recipe</a>
-      </p>
-    </footer>
   </body>
 </html>
